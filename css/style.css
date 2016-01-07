@@ -314,6 +314,11 @@
     	text-align: center;
     }
 
+		.lj-countdown h2 {
+			margin-left: 0.8em;
+			margin-right: 0.8em;
+		}
+
     .lj-countdown div {
     	display: inline-block;
     }
