@@ -1,0 +1,651 @@
+/*
+	Author: Lumberjacks
+	Template: Red Cap (Coming Soon)
+	Version: 1.0
+	URL: http://themeforest.net/user/Lumberjacks/
+*/
+
+
+
+/* TABLE OF CONTENTS
+
+	1. Import section
+	2. Basic styles
+	3. Typography
+	4. Breakpoint for high-res devices
+	5. Header
+	6. Main
+	7. Footer
+	8. Breakpoints
+
+*/
+
+
+
+/* 1. IMPORT SECTION */
+
+	@import url("bootstrap.css");
+	@import url("http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext");
+	@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+	@import url("font-awesome.min.css");
+
+
+
+/* 2. BASIC STYLES */
+
+	body {
+		font: 16px/1.5 Lato, "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+		background-color: #fff;
+		color: #262626;
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	a { 
+		color: #4ecc6c;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+	}
+
+	a:hover {
+		color: #4ecc6c;
+	}
+
+	a, a:hover, a:active, a:focus {
+		outline: 0;
+		border: 0;
+		text-decoration: none;
+	}
+
+	.lj-float-left {
+		float: left;
+	}
+
+	.lj-float-right {
+		float: right;
+	}
+	
+	.lj-block-center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.lj-show {
+		display: block !important;
+	}
+	
+	.lj-hide {
+		display: none !important;
+		visibility: hidden !important;
+	}
+
+
+
+/* 3. TYPOGRAPHY */
+
+	p {
+		line-height: 1.5;
+	}
+    
+	.lj-text-uppercase {
+		text-transform: uppercase;
+	}
+
+	.lj-text-center {
+		text-align: center;
+	}
+
+	.lj-text-left {
+		text-align: left;
+	}
+
+	.lj-text-right {
+		text-align: right;
+	}
+
+	.lj-text-justify {
+		text-align: justify;
+	}
+
+	.lj-text-underline {
+		text-decoration: underline;
+	}
+
+
+
+/* 4. BREAKPOINT FOR HIGH-RES DEVICES */
+
+	@media
+	  only screen and (-webkit-min-device-pixel-ratio: 2),
+	  only screen and (   min--moz-device-pixel-ratio: 2),
+	  only screen and (     -o-min-device-pixel-ratio: 2/1),
+	  only screen and (        min-device-pixel-ratio: 2),
+	  only screen and (                min-resolution: 192dpi),
+	  only screen and (                min-resolution: 2dppx) {
+
+	  	.lj-logo-1x {
+			display: none !important;
+		}
+		
+		.lj-logo-2x {
+			display: block !important;
+		}
+
+	} 
+
+
+
+/* 5. HEADER */
+
+	header {
+		width: 100%;
+		min-height: 700px;
+		overflow: hidden;
+		position: relative;
+		background-color: #e6e6e6;
+	}
+	
+	header > .container {
+		min-height: 700px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	
+	.lj-overlay {
+		width: 100%;
+		height: 100%;		
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	.lj-background-repeat {
+	    background-repeat: repeat;
+	}
+	
+	.lj-background-no-repeat {
+		background-repeat: no-repeat;
+	}
+	
+	.lj-overlay-none {
+		display: none;
+		visibility: hidden;
+	}
+	
+	.lj-overlay-image {
+		background-image: url('../img/noise.png');
+		background-repeat: repeat;
+	}
+	
+	.lj-overlay-color {
+	    background-color: rgba(0,0,0,0.5);
+	}
+	
+	.lj-overlay-gradient {
+		background: -moz-linear-gradient(215deg,  rgba(149,50,89,0.7) 0%, rgba(89,50,60,0.7) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(149,50,89,0.7)), color-stop(100%,rgba(89,50,60,0.7))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(215deg,  rgba(149,50,89,0.7) 0%,rgba(89,50,60,0.7) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(215deg,  rgba(149,50,89,0.7) 0%,rgba(89,50,60,0.7) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(215deg,  rgba(149,50,89,0.7) 0%,rgba(89,50,60,0.7) 100%); /* IE10+ */
+		background: linear-gradient(215deg,  rgba(149,50,89,0.7) 0%,rgba(89,50,60,0.7) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34e054', endColorstr='#a32383',GradientType=1 ) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/1x1.png'); /* IE6-9 fallback on horizontal gradient */
+		pointer-events:none;
+	}
+
+	header.yt-background {
+		background-image: url('../img/video.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.mobile .mbYTP_wrapper,
+	.tablet .mbYTP_wrapper {
+		z-index: -1 !important;
+	}
+
+	.mobile .yt-controls,
+	.tablet .yt-controls {
+		display: none;
+	}
+
+	.yt-controls {
+		margin-top: 50px;
+		text-align: right;
+	}
+
+	.yt-controls a {
+		display: inline-block;
+		color: #595959;
+		width: 20px;
+	}
+
+	.yt-controls a:hover {
+		color: #4ecc6c;
+	}
+
+	video {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: 0;
+		background: url('../img/video.jpg') no-repeat;
+		background-size: cover;
+	}
+	
+	.lj-logo a,
+	.lj-logo img {
+		width: 100px;
+		height: 60px;
+	}
+	
+	.lj-logo a {
+		display: block;
+		margin-left: 10px;
+	}
+	
+	.lj-logo img {
+	    vertical-align: bottom;
+	}
+	
+	.lj-logo-1x {
+		display: block;
+	}
+	
+	.lj-logo-2x {
+		display: none;
+	}
+	
+	.lj-socials ul {
+		height: 25px;
+		list-style: none;
+		margin: 0 10px 0;
+	}
+	
+	.lj-socials ul li {
+		height: 25px;
+		font-size: 1.25em;
+		line-height: 25px;
+		float: left;
+		margin-left: 15px;
+	}
+	
+	.lj-socials ul li a {
+		color: #595959;
+	}
+
+	.lj-socials ul li a:hover {
+		color: #4ecc6c;
+	}
+
+	.lj-title {
+        margin-top: 50px;
+    }
+    
+    .lj-title h1 {
+    	font-family: 'Montserrat';
+    	font-size: 4em;
+    	font-weight: 700;
+        color: #595959;
+        margin: 0;
+        word-wrap: break-word;
+    }
+    
+    .lj-title span {
+        color: #4ecc6c;
+    }
+
+    .lj-countdown {
+    	color: #595959;
+    	margin-top: 75px;
+    	text-align: center;
+    }
+
+    .lj-countdown > * {
+    	text-align: center;
+    }
+
+    .lj-countdown div {
+    	display: inline-block;
+    }
+
+    .lj-countdown div span {
+    	width: 150px;
+    	display: block;    	
+    }
+
+    .lj-countdown div span:first-child {
+    	height: 64px;
+    	font-family: 'Montserrat';
+    	font-weight: 700;
+    	font-size: 4em;
+    	line-height: 64px;
+    }
+
+    .lj-countdown div span:last-child {
+    	height: 20px;
+    	font-family: Lato, "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+    	font-weight: 400;
+    	font-size: 1.25em;
+    	line-height: 20px;
+    }
+
+    .lj-header-button {
+    	margin-top: 75px;
+    	text-align: center;
+    }
+
+    .lj-header-button a {
+    	display: inline-block;
+    	color: #595959;
+    	text-align: center;
+    	background-color: transparent;
+    	font-family: 'Montserrat';
+    	font-weight: 700;
+    	padding: 10px 20px;
+    	border: 3px solid #4ecc6c;
+    	-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+    }
+
+    .lj-header-button a:hover {
+    	color: #fff;
+    	background-color: #4ecc6c;
+    	border: 3px solid #4ecc6c;
+    }
+
+
+    
+/* 6. MAIN */
+
+	.main {
+		background-color: #fff;
+	}
+
+	.main > .container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	.lj-icon-box {
+		padding: 0 10px;
+	}
+
+	.lj-icon-box span {
+		display: inline-block;
+		font-size: 3em;
+		width: 100px;
+		height: 100px;
+		line-height: 94px;
+		border-radius: 50%;
+		text-align: center;
+		color: #4ecc6c;	
+		border: 3px solid #4ecc6c;
+		background-color: #fff;
+	}
+
+	.lj-icon-box h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-size: 1.3em;
+		word-wrap: break-word;
+		color: #595959;
+	}
+
+	.lj-icon-box p {
+		color: #666;
+	}
+
+	.lj-icon-box h2,
+	.lj-icon-box p {
+		margin: 20px 0 0;
+		padding: 0 10px;
+	}
+
+	.lj-icon-box p a {
+		font-weight: 700;
+	}
+	    
+
+
+/* 7. FOOTER */
+
+	footer {
+		width: 100%;
+		background-color: #4ecc6c;
+	}
+
+	footer > .container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	footer h3 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-size: 1.3em;
+		color: #fff;
+		margin: 0;
+		padding: 0 10px;
+	}
+
+	footer h3 span {
+		color: #308043;
+	}
+
+    form {
+        margin-top: 50px;
+    }
+    
+    .lj-form input[type=text] {
+    	width: 300px;
+    	height: 50px;
+    	display: block;
+    	padding: 0 10px;    	
+    	background-color: #fff;
+        border: 3px solid #fff;
+		-webkit-border-top-left-radius: 3px;
+		-webkit-border-bottom-left-radius: 3px;
+		-moz-border-radius-topleft: 3px;
+		-moz-border-radius-bottomleft: 3px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		line-height: 44px;
+		color: #262626;
+		float: left;
+    }
+
+    .lj-form input:focus {
+    	outline: 0;
+    }
+    
+    .lj-form input[type=submit] {
+    	width: 160px;
+    	height: 50px;
+    	display: block;
+    	padding: 0 10px; 
+        border: 3px solid #308043;
+		-webkit-border-top-right-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		-moz-border-radius-topright: 3px;
+		-moz-border-radius-bottomright: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+        background-color: transparent;
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-size: 1em;
+		color: #fff;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+		float: right;
+    }
+
+    .lj-form input[type=submit]:hover {
+    	background-color: #308043;
+    	color: #fff;
+    	border: 3px solid #308043;
+    }
+
+    .lj-form form div {
+    	width: 460px;
+    	height: 50px;
+    }
+
+    .lj-message {
+    	width: 100%;
+    	padding: 13px 10px;
+    	margin-top: 50px;
+    	text-align: center;
+    	color: #fff;
+    }
+
+	.lj-address {
+		margin-top: 50px;
+	}
+
+	.lj-address p {
+		color: #308043;
+		margin: 0;
+	}
+
+	.lj-address:first-child p {
+		text-align: right;
+	}
+
+
+
+/* 8. BREAKPOINTS */
+
+	@media (max-width: 767px) {
+
+		/* HEADER */
+
+		.lj-logo a {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.lj-countdown div span {
+			width: 115px;
+		}
+
+		/* MAIN */
+
+		.lj-icon-box:first-child {
+			padding: 0 20px;
+			margin-top: 0;
+		}
+
+		.lj-icon-box {
+			margin-top: 50px;
+		}
+
+		.lj-icon-box h2,
+		.lj-icon-box p {
+			
+			margin: 20px auto 0;
+			max-width: 480px;
+		}
+
+		/* FOOTER */
+
+		.lj-address p,
+		.lj-address:first-child p {
+			text-align: center;
+		}
+
+		.lj-mobile-socials {
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		.lj-mobile-socials ul {
+			display: inline-block;
+			height: 50px;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.lj-mobile-socials ul li {
+			height: 50px;
+			font-size: 3em;
+			line-height: 50px;
+			float: left;
+			margin: 0 10px;
+		}
+		
+		.lj-mobile-socials ul li a {
+			color: #308043;
+		}
+
+		.lj-mobile-socials ul li a:hover {
+			color: #fff;
+		}
+
+	}
+
+	@media (max-width: 480px) {
+
+		/* HEADER */
+
+		.lj-countdown div span {
+			margin: 0 10px;
+		}
+
+		.lj-countdown-ms {
+			margin-top: 10px;
+		}
+
+		/* FOOTER */
+
+		.lj-form input[type=text],
+		.lj-form input[type=submit] {
+			width: 100%;
+			float: none;
+		}
+
+		.lj-form input[type=text] {
+			-webkit-border-top-left-radius: 3px;
+			-webkit-border-top-right-radius: 3px;
+			-moz-border-radius-topleft: 3px;
+			-moz-border-radius-topright: 3px;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+			-webkit-border-bottom-left-radius: 0;
+			-moz-border-radius-bottomleft: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		.lj-form input[type=submit] {
+			-webkit-border-bottom-right-radius: 3px;
+			-webkit-border-bottom-left-radius: 3px;
+			-moz-border-radius-bottomright: 3px;
+			-moz-border-radius-bottomleft: 3px;
+			border-bottom-right-radius: 3px;
+			border-bottom-left-radius: 3px;
+			-webkit-border-top-right-radius: 0;
+			-moz-border-radius-topright: 0;
+			border-top-right-radius: 0;
+		}
+
+		.lj-form form div {
+			width: 90%;
+			height: 100px;
+		}
+
+}
